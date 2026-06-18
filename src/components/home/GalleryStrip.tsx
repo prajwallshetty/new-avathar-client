@@ -15,44 +15,57 @@ const stripImages = [
   "/reception/RAVI0978.jpg.jpeg",
 ];
 
+// Duplicate for seamless loop
+const loopImages = [...stripImages, ...stripImages];
+
 export default function GalleryStrip() {
   return (
     <section className="py-0 bg-brand-bg overflow-hidden relative group">
-      <Link href="https://instagram.com" target="_blank" className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
-        <div className="bg-brand-gold text-brand-black font-inter text-xs tracking-widest uppercase px-6 py-3 flex items-center gap-3">
+
+      {/* Instagram overlay — desktop hover only */}
+      <Link
+        href="https://instagram.com"
+        target="_blank"
+        className="absolute inset-0 z-20 hidden sm:flex items-center justify-center
+                   opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40"
+      >
+        <div className="bg-[#D4AF72] text-[#0D0B08] font-inter text-xs tracking-widest uppercase px-6 py-3 flex items-center gap-3">
           <FaInstagram className="text-lg" />
           Follow @newavathar
         </div>
       </Link>
 
-      <div className="flex w-[200%] animate-marquee hover:animation-play-state-paused">
-        {[...stripImages, ...stripImages].map((src, index) => (
-          <div key={index} className="relative w-1/4 sm:w-1/5 md:w-1/6 lg:w-[12.5%] aspect-square flex-shrink-0">
+      {/* Marquee track — uses CSS animation via inline keyframes */}
+      <div
+        className="flex"
+        style={{
+          width: "max-content",
+          animation: "marquee-scroll 28s linear infinite",
+          willChange: "transform",
+        }}
+      >
+        {loopImages.map((src, index) => (
+          <div
+            key={index}
+            className="relative aspect-square flex-shrink-0"
+            style={{ width: "clamp(120px, 25vw, 200px)" }}
+          >
             <Image
               src={src}
-              alt="Instagram Feed"
+              alt="Gallery"
               fill
-              className="object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer"
-              sizes="20vw"
+              className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              sizes="200px"
             />
           </div>
         ))}
       </div>
 
-      <style jsx global>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-marquee {
-          animation: marquee 30s linear infinite;
-        }
-        .hover\\:animation-play-state-paused:hover {
-          animation-play-state: paused;
+      {/* Keyframe injected via <style> tag — works in App Router without jsx pragma */}
+      <style>{`
+        @keyframes marquee-scroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
       `}</style>
     </section>

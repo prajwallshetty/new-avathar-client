@@ -71,21 +71,33 @@ export default function Categories() {
                     className="object-cover"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-black/95 via-brand-black/30 to-transparent opacity-75 group-hover:opacity-90 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10 transition-opacity duration-300" />
                 </motion.div>
 
                 {/* Content */}
-                <div className="absolute inset-0 p-7 flex flex-col justify-end">
-                  <span className="font-inter text-brand-gold text-[10px] tracking-[0.22em] uppercase mb-2 opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-400">
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  {/* Count — slides up on hover */}
+                  <span className="font-inter text-[#D4AF72] text-[9px] tracking-[0.25em] uppercase mb-2
+                    opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0
+                    transition-all duration-300">
                     {cat.count}
                   </span>
-                  <h3 className="font-playfair text-xl text-brand-text tracking-wide mb-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+
+                  {/* Title — ALWAYS visible */}
+                  <h3 className="font-playfair text-xl sm:text-lg lg:text-xl text-white tracking-wide
+                    [text-shadow:0_2px_12px_rgba(0,0,0,0.95),0_0_6px_rgba(0,0,0,1)]">
                     {cat.title}
                   </h3>
-                  <p className="font-inter text-brand-mutedLight text-xs tracking-wide transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-75">
-                    {cat.desc}
-                  </p>
-                  <div className="w-0 h-px bg-brand-gold mt-4 group-hover:w-10 transition-all duration-500 delay-150" />
+
+                  {/* Gold divider + desc — reveal on hover */}
+                  <div className="overflow-hidden">
+                    <p className="font-inter text-white/70 text-[11px] tracking-wide mt-2
+                      opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0
+                      transition-all duration-400 delay-75">
+                      {cat.desc}
+                    </p>
+                  </div>
+                  <div className="h-px bg-[#D4AF72] mt-3 w-0 group-hover:w-8 transition-all duration-500 delay-100" />
                 </div>
               </Link>
             </ScrollReveal>
