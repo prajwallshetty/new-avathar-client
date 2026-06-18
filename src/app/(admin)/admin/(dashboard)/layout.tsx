@@ -199,7 +199,7 @@ export default function AdminDashboardLayout({
         </div>
         {!collapsed && (
           <div className="flex flex-col overflow-hidden">
-            <span className="font-semibold text-sm whitespace-nowrap text-foreground leading-tight tracking-tight">New Avathar</span>
+            <span className="font-semibold text-sm whitespace-nowrap text-foreground leading-tight tracking-tight">New Avatar</span>
             <span className="text-[9px] tracking-wider text-muted-foreground uppercase font-medium mt-0.5">Admin Panel</span>
           </div>
         )}

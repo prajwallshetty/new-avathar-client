@@ -58,7 +58,7 @@ export default function Navbar() {
                   : "text-[#F7F1E6]"
                 }`}
             >
-              NEW AVATHAR
+              NEW AVATAR
             </span>
             <span
               className={`font-inter text-[7.5px] tracking-[0.4em] uppercase mt-1 transition-colors duration-300
@@ -147,7 +147,7 @@ export default function Navbar() {
             {/* Logo repeat inside menu */}
             <div className="h-[72px] flex items-center px-6 border-b border-white/[0.06]">
               <span className="font-playfair text-lg tracking-[0.2em] text-[#F7F1E6]">
-                NEW AVATHAR
+                NEW AVATAR
               </span>
             </div>
 

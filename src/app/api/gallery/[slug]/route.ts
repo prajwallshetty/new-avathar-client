@@ -24,11 +24,11 @@ export async function GET(
 
     // Fetch branding logo/settings
     const branding = await Settings.findOne() || {
-      brandName: "New Avathar Photography",
+      brandName: "New Avatar Photography",
       whatsappNumber: "",
       instagramLink: "",
       facebookLink: "",
-      footerText: "© New Avathar Photography. All Rights Reserved.",
+      footerText: "© New Avatar Photography. All Rights Reserved.",
     };
 
     // If password-protected and not authenticated yet, hide private fields

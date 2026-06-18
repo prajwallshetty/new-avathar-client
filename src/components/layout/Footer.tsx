@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
           <div className="md:col-span-2">
             <h2 className="font-playfair text-2xl tracking-widest text-brand-text mb-2">
-              NEW AVATHAR
+              NEW AVATAR
             </h2>
             <p className="text-brand-gold tracking-[0.2em] text-xs font-inter mb-6">
               PHOTOGRAPHY
@@ -65,8 +65,8 @@ export default function Footer() {
             <h3 className="font-inter tracking-widest text-sm text-brand-text mb-6 uppercase">Contact</h3>
             <ul className="space-y-4 text-brand-mutedLight font-inter text-sm tracking-wide">
               <li>
-                <a href="mailto:hello@newavathar.com" className="hover:text-brand-gold transition-colors">
-                  hello@newavathar.com
+                <a href="mailto:hello@newavatar.com" className="hover:text-brand-gold transition-colors">
+                  hello@newavatar.com
                 </a>
               </li>
               <li>
@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-brand-border pt-8 flex flex-col md:flex-row justify-between items-center text-xs tracking-wider font-inter text-brand-mutedLight">
-          <p>&copy; {currentYear} New Avathar Photography. All Rights Reserved.</p>
+          <p>&copy; {currentYear} New Avatar Photography. All Rights Reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="hover:text-brand-text transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-brand-text transition-colors">Terms of Service</Link>

@@ -16,7 +16,7 @@ const testimonials = [
   },
   {
     id: 2,
-    quote: "Working with New Avathar was the best decision we made. Their attention to detail, lighting, and raw emotion is unmatched in the industry.",
+    quote: "Working with New Avatar was the best decision we made. Their attention to detail, lighting, and raw emotion is unmatched in the industry.",
     author: "Sarah & John",
     location: "Tuscany Pre-Wedding",
     img: "/prewedding/2N2A4086.jpg.jpeg",

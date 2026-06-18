@@ -10,7 +10,7 @@ export default function StorySection() {
       <div className="relative h-[60vh] md:h-[80vh] w-full mb-20 md:mb-32">
         <Image
           src="/prewedding/2N2A4013.jpg.jpeg"
-          alt="New Avathar Story"
+          alt="New Avatar Story"
           fill
           priority
           className="object-cover"
@@ -50,7 +50,7 @@ export default function StorySection() {
               <p className="font-inter tracking-[0.2em] text-brand-gold text-xs uppercase mb-6">The Beginning</p>
               <h2 className="font-playfair text-3xl md:text-5xl text-brand-text mb-6">Born from a passion for cinematic arts.</h2>
               <p className="text-brand-mutedLight font-inter font-light leading-relaxed mb-6">
-                New Avathar Photography started with a simple belief: weddings and milestones shouldn't be photographed like standard events. They should be captured like epic films. 
+                New Avatar Photography started with a simple belief: weddings and milestones shouldn't be photographed like standard events. They should be captured like epic films. 
               </p>
               <p className="text-brand-mutedLight font-inter font-light leading-relaxed">
                 Drawing inspiration from high-fashion editorial spreads and classic cinema, we developed a distinctive style that relies on dramatic lighting, intentional composition, and an unflinching focus on raw emotion.

@@ -48,7 +48,7 @@ export default function HeroSection() {
                      text-white leading-none tracking-[0.08em]
                      [text-shadow:0_4px_40px_rgba(0,0,0,0.95),0_2px_10px_rgba(0,0,0,1)]"
         >
-          NEW AVATHAR
+          NEW AVATAR
         </motion.h1>
 
         {/* Divider + subtitle */}

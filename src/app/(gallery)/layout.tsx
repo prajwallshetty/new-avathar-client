@@ -22,8 +22,8 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "New Avathar Photography | Client Galleries",
-  description: "View and share your curated event stories photographed by New Avathar Photography.",
+  title: "New Avatar Photography | Client Galleries",
+  description: "View and share your curated event stories photographed by New Avatar Photography.",
 };
 
 export default function GalleryGroupRootLayout({

@@ -14,7 +14,7 @@ export async function POST(request: Request) {
 
     // Seeding dynamic admin on first login if database has no users
     if (userCount === 0) {
-      const defaultEmail = process.env.ADMIN_EMAIL || "admin@newavathar.com";
+      const defaultEmail = process.env.ADMIN_EMAIL || "admin@newavatar.com";
       const defaultPassword = process.env.ADMIN_PASSWORD || "admin123";
 
       if (email === defaultEmail && password === defaultPassword) {

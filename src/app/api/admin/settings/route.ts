@@ -10,11 +10,11 @@ export async function GET() {
     if (!settings) {
       // Create default settings on first load
       settings = await Settings.create({
-        brandName: "New Avathar Photography",
+        brandName: "New Avatar Photography",
         whatsappNumber: "+91 99999 99999",
-        instagramLink: "https://instagram.com/newavathar",
-        facebookLink: "https://facebook.com/newavathar",
-        footerText: "© New Avathar Photography. All Rights Reserved.",
+        instagramLink: "https://instagram.com/newavatar",
+        facebookLink: "https://facebook.com/newavatar",
+        footerText: "© New Avatar Photography. All Rights Reserved.",
       });
     }
     return NextResponse.json({ settings });

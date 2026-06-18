@@ -99,7 +99,7 @@ function LockScreen({
       >
         {/* Logo */}
         <div className="text-center mb-10">
-          <p className="font-mono text-[9px] tracking-[0.4em] uppercase text-white/30 mb-2">New Avathar Photography</p>
+          <p className="font-mono text-[9px] tracking-[0.4em] uppercase text-white/30 mb-2">New Avatar Photography</p>
           <div className={cn("w-8 h-px mx-auto", `bg-[${accent.hex}]`)} style={{ backgroundColor: accent.hex }} />
         </div>
 
@@ -171,10 +171,10 @@ export default function ClientGalleryView({ slug }: { slug: string }) {
 
   // Session init
   useEffect(() => {
-    let sess = localStorage.getItem("newavathar_session_id");
+    let sess = localStorage.getItem("newavatar_session_id");
     if (!sess) {
       sess = "sess_" + Math.random().toString(36).substring(2) + Date.now().toString(36);
-      localStorage.setItem("newavathar_session_id", sess);
+      localStorage.setItem("newavatar_session_id", sess);
     }
     setSessionId(sess);
   }, []);
@@ -256,7 +256,7 @@ export default function ClientGalleryView({ slug }: { slug: string }) {
     try {
       toast.info("Preparing download…");
       const blob = await (await fetch(photo.url)).blob();
-      saveAs(blob, `newavathar-${event?.slug}-${photo._id}.jpg`);
+      saveAs(blob, `newavatar-${event?.slug}-${photo._id}.jpg`);
       await fetch(`/api/gallery/${slug}/download`, {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ photoId: photo._id, sessionId, category: "single" }),
@@ -282,7 +282,7 @@ export default function ClientGalleryView({ slug }: { slug: string }) {
         }));
         setZipProgress(Math.min(100, Math.floor(((i + chunk.length) / photosToDownload.length) * 100)));
       }
-      saveAs(await zip.generateAsync({ type: "blob" }), `newavathar-${event?.slug || "gallery"}.zip`);
+      saveAs(await zip.generateAsync({ type: "blob" }), `newavatar-${event?.slug || "gallery"}.zip`);
       await fetch(`/api/gallery/${slug}/download`, {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ sessionId, category: logCategory }),
@@ -344,7 +344,7 @@ export default function ClientGalleryView({ slug }: { slug: string }) {
         {/* Brand watermark */}
         <div className="absolute top-6 left-6 md:top-8 md:left-10">
           <p className="font-mono text-[9px] tracking-[0.4em] uppercase text-white/40">
-            {branding.brandName || "New Avathar Photography"}
+            {branding.brandName || "New Avatar Photography"}
           </p>
         </div>
 
@@ -690,7 +690,7 @@ export default function ClientGalleryView({ slug }: { slug: string }) {
       {/* ─── Footer ─── */}
       <footer className="border-t border-white/[0.07] py-14 text-center bg-[#0A0806]">
         <p className="font-serif text-xl text-white/60 mb-1">
-          {branding.brandName || "New Avathar"}
+          {branding.brandName || "New Avatar"}
         </p>
         <p className={cn("font-mono text-[9px] uppercase tracking-[0.35em] mb-8", accent.text)}>
           Photography &amp; Cinematography
@@ -719,7 +719,7 @@ export default function ClientGalleryView({ slug }: { slug: string }) {
         </div>
 
         <p className="font-mono text-[9px] tracking-widest uppercase text-white/20">
-          {branding.footerText || `© ${new Date().getFullYear()} New Avathar Photography. All rights reserved.`}
+          {branding.footerText || `© ${new Date().getFullYear()} New Avatar Photography. All rights reserved.`}
         </p>
       </footer>
     </div>

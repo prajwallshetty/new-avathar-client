@@ -6,11 +6,11 @@ export interface ISettingsDocument extends Omit<ISettings, "_id">, Document {}
 const SettingsSchema = new Schema<ISettingsDocument>(
   {
     logoUrl: { type: String, default: "" },
-    brandName: { type: String, required: true, default: "New Avathar Photography" },
+    brandName: { type: String, required: true, default: "New Avatar Photography" },
     whatsappNumber: { type: String, default: "" },
     instagramLink: { type: String, default: "" },
     facebookLink: { type: String, default: "" },
-    footerText: { type: String, default: "© New Avathar Photography. All Rights Reserved." },
+    footerText: { type: String, default: "© New Avatar Photography. All Rights Reserved." },
   },
   { timestamps: true }
 );

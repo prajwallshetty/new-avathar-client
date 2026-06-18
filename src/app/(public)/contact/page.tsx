@@ -4,7 +4,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 export const metadata = {
-  title: "Contact | New Avathar Photography",
+  title: "Contact | New Avatar Photography",
   description: "Inquire about our photography services for your upcoming wedding or event.",
 };
 
@@ -34,11 +34,11 @@ export default function ContactPage() {
                 </p>
                 
                 <div className="space-y-6">
-                  <a href="mailto:hello@newavathar.com" className="flex items-center gap-4 text-brand-muted hover:text-brand-gold transition-colors group">
+                  <a href="mailto:hello@newavatar.com" className="flex items-center gap-4 text-brand-muted hover:text-brand-gold transition-colors group">
                     <div className="w-12 h-12 flex items-center justify-center border border-brand-border rounded-full group-hover:border-brand-gold transition-colors">
                       <FaEnvelope />
                     </div>
-                    <span className="font-inter tracking-wide text-sm">hello@newavathar.com</span>
+                    <span className="font-inter tracking-wide text-sm">hello@newavatar.com</span>
                   </a>
                   
                   <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-brand-muted hover:text-brand-gold transition-colors group">

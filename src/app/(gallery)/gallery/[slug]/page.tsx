@@ -12,14 +12,14 @@ export async function generateMetadata(props: PageProps) {
   try {
     await connectToDatabase();
     const event = await Event.findOne({ slug: params.slug });
-    if (!event) return { title: "Gallery Not Found - New Avathar" };
+    if (!event) return { title: "Gallery Not Found - New Avatar" };
 
     return {
-      title: `${event.title} | New Avathar Photography`,
-      description: `View the official client gallery for ${event.title}. curated by New Avathar Photography.`,
+      title: `${event.title} | New Avatar Photography`,
+      description: `View the official client gallery for ${event.title}. curated by New Avatar Photography.`,
     };
   } catch (err) {
-    return { title: "Gallery - New Avathar Photography" };
+    return { title: "Gallery - New Avatar Photography" };
   }
 }
 

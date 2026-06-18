@@ -6,7 +6,7 @@ const milestones = [
   {
     year: "2015",
     title: "The Genesis",
-    description: "New Avathar Photography was founded with a single camera and a grand vision to redefine wedding photography in India.",
+    description: "New Avatar Photography was founded with a single camera and a grand vision to redefine wedding photography in India.",
   },
   {
     year: "2018",

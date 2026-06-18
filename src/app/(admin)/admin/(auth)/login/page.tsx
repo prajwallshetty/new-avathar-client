@@ -65,7 +65,7 @@ export default function AdminLogin() {
             <Camera size={20} strokeWidth={1.5} />
           </div>
           <h2 className="text-2xl font-bold tracking-tight text-white drop-shadow-md">
-            New Avathar Photography
+            New Avatar Photography
           </h2>
           <p className="text-xs text-white/75 font-medium leading-relaxed max-w-sm drop-shadow-sm">
             Capturing stories beyond frames. Access client portals and design beautiful event galleries from the dashboard.
@@ -83,7 +83,7 @@ export default function AdminLogin() {
                 <Camera size={16} strokeWidth={2} />
               </div>
               <span className="font-bold text-sm tracking-widest text-foreground uppercase">
-                New Avathar
+                New Avatar
               </span>
             </div>
             <div className="space-y-1">
@@ -112,7 +112,7 @@ export default function AdminLogin() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   autoComplete="email"
-                  placeholder="admin@newavathar.com"
+                  placeholder="admin@newavatar.com"
                   className="bg-muted/50 border-border text-xs h-10 px-3"
                 />
               </div>

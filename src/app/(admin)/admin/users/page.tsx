@@ -159,7 +159,7 @@ export default function UserManagement() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    placeholder="e.g. editor@newavathar.com"
+                    placeholder="e.g. editor@newavatar.com"
                     className="bg-muted/50 border-border text-xs h-10 px-3"
                   />
                 </div>

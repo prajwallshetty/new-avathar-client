@@ -16,7 +16,7 @@ export default function BrandingSettings() {
   
   const [formData, setFormData] = useState({
     logoUrl: "",
-    brandName: "New Avathar Photography",
+    brandName: "New Avatar Photography",
     whatsappNumber: "",
     instagramLink: "",
     facebookLink: "",
@@ -32,7 +32,7 @@ export default function BrandingSettings() {
           if (data.settings) {
             setFormData({
               logoUrl: data.settings.logoUrl || "",
-              brandName: data.settings.brandName || "New Avathar Photography",
+              brandName: data.settings.brandName || "New Avatar Photography",
               whatsappNumber: data.settings.whatsappNumber || "",
               instagramLink: data.settings.instagramLink || "",
               facebookLink: data.settings.facebookLink || "",
@@ -170,7 +170,7 @@ export default function BrandingSettings() {
                   value={formData.brandName}
                   onChange={handleChange}
                   required
-                  placeholder="New Avathar Photography"
+                  placeholder="New Avatar Photography"
                   className="bg-muted/50 border-border text-xs h-10 px-3"
                 />
               </div>
@@ -225,7 +225,7 @@ export default function BrandingSettings() {
                 name="footerText"
                 value={formData.footerText}
                 onChange={handleChange}
-                placeholder="e.g. © 2026 New Avathar Photography. All Rights Reserved."
+                placeholder="e.g. © 2026 New Avatar Photography. All Rights Reserved."
                 className="bg-muted/50 border-border text-xs h-10 px-3"
               />
             </div>

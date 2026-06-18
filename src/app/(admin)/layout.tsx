@@ -23,7 +23,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "New Avathar | Admin Portal",
+  title: "New Avatar | Admin Portal",
   description: "Internal administrative control panel.",
 };
 

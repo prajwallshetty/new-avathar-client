@@ -31,7 +31,7 @@ export default function GalleryStrip() {
       >
         <div className="bg-[#D4AF72] text-[#0D0B08] font-inter text-xs tracking-widest uppercase px-6 py-3 flex items-center gap-3">
           <FaInstagram className="text-lg" />
-          Follow @newavathar
+          Follow @newavatar
         </div>
       </Link>
 

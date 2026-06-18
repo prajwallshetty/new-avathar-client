@@ -49,7 +49,7 @@ export default function AboutPreview() {
 
             <ScrollReveal direction="left" delay={0.4}>
               <p className="text-brand-mutedLight font-inter font-light leading-relaxed mb-10 max-w-lg">
-                At New Avathar Photography, we specialize in high-end, editorial-style wedding photography and cinematic films. Our approach blends raw emotion with stylized composition to create ageless visual narratives.
+                At New Avatar Photography, we specialize in high-end, editorial-style wedding photography and cinematic films. Our approach blends raw emotion with stylized composition to create ageless visual narratives.
               </p>
             </ScrollReveal>
 

@@ -25,7 +25,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "New Avathar Photography | Cinematic Wedding & Luxury Stories",
+  title: "New Avatar Photography | Cinematic Wedding & Luxury Stories",
   description: "Capturing stories beyond frames. Premium, full-service luxury photography and cinematic films for weddings, events, and portraits.",
 };
 

@@ -4,7 +4,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import GalleryGrid from "@/components/gallery/GalleryGrid";
 
 export const metadata = {
-  title: "Portfolio | New Avathar Photography",
+  title: "Portfolio | New Avatar Photography",
   description: "View our cinematic photography portfolio — Weddings, Pre-Wedding, Reception, Haldi, and Portraits.",
 };
 
