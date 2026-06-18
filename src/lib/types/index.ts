@@ -118,3 +118,22 @@ export interface IInquiry {
   updatedAt?: string;
 }
 
+export interface IBlogPost {
+  _id?: string;
+  title: string;
+  slug: string;
+  content: string;
+  excerpt: string;
+  coverImage?: string;
+  category: string;
+  tags: string[];
+  status: "Draft" | "Published";
+  seoTitle?: string;
+  seoDescription?: string;
+  seoKeywords?: string[];
+  author: string;
+  publishedAt?: string | Date;
+  createdAt?: string;
+  updatedAt?: string;
+}
+

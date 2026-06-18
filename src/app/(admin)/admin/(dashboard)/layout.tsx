@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
@@ -18,6 +19,7 @@ import {
   Settings as SettingsIcon,
   Users as UsersIcon,
   Mail,
+  BookOpen,
 } from "lucide-react";
 
 function formatRelativeTime(dateString: string) {
@@ -174,6 +176,7 @@ export default function AdminDashboardLayout({
       items: [
         { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
         { href: "/admin/create", label: "Create Event", icon: PlusCircle, exact: false },
+        { href: "/admin/blog", label: "Blog Posts", icon: BookOpen, exact: false },
         { href: "/admin/inquiries", label: "Inquiries", icon: Mail, exact: false },
       ],
     },
@@ -194,8 +197,8 @@ export default function AdminDashboardLayout({
     <div className="flex flex-col h-full overflow-hidden">
       {/* Brand */}
       <div className="flex items-center gap-2.5 px-4 border-b border-border h-14 relative flex-shrink-0">
-        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
-          <Aperture size={18} strokeWidth={1.5} />
+        <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0 shadow-sm relative">
+          <Image src="/logo.jpg" alt="New Avatar Logo" fill className="object-cover" />
         </div>
         {!collapsed && (
           <div className="flex flex-col overflow-hidden">

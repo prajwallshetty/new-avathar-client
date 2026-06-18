@@ -54,6 +54,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="text-brand-mutedLight hover:text-brand-gold transition-colors font-inter text-sm tracking-wide">
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-brand-mutedLight hover:text-brand-gold transition-colors font-inter text-sm tracking-wide">
                   Inquire
                 </Link>
