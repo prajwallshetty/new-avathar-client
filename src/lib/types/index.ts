@@ -103,3 +103,18 @@ export interface ISettings {
   createdAt?: string;
   updatedAt?: string;
 }
+
+export interface IInquiry {
+  _id?: string;
+  name: string;
+  phone: string;
+  email: string;
+  date?: string;
+  type: "wedding" | "pre-wedding" | "portrait" | "event" | "other";
+  message: string;
+  status: "New" | "Replied" | "Archived";
+  notes?: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
+

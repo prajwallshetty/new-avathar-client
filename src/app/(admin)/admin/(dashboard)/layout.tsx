@@ -17,6 +17,7 @@ import {
   Aperture,
   Settings as SettingsIcon,
   Users as UsersIcon,
+  Mail,
 } from "lucide-react";
 
 function formatRelativeTime(dateString: string) {
@@ -173,6 +174,7 @@ export default function AdminDashboardLayout({
       items: [
         { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
         { href: "/admin/create", label: "Create Event", icon: PlusCircle, exact: false },
+        { href: "/admin/inquiries", label: "Inquiries", icon: Mail, exact: false },
       ],
     },
     ...(user?.role === "admin"

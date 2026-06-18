@@ -5,17 +5,44 @@ import Button from "@/components/ui/Button";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("submitting");
-    
-    // Simulate API call
-    setTimeout(() => {
-      setStatus("success");
-      // Reset after 3 seconds
-      setTimeout(() => setStatus("idle"), 3000);
-    }, 1500);
+    setErrorMsg("");
+
+    const formData = new FormData(e.currentTarget);
+    const payload = {
+      name: formData.get("name"),
+      phone: formData.get("phone"),
+      email: formData.get("email"),
+      date: formData.get("date"),
+      type: formData.get("type"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const res = await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        // Reset state back to idle after 5 seconds to allow sending another inquiry
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        const data = await res.json();
+        setErrorMsg(data.error || "Failed to submit inquiry. Please try again.");
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      setErrorMsg("Network error. Please try again later.");
+      setStatus("error");
+    }
   };
 
   return (
@@ -29,12 +56,19 @@ export default function ContactForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
+          {status === "error" && (
+            <div className="bg-red-500/10 border border-red-500/30 p-4 rounded-sm text-red-400 text-xs font-inter text-center animate-in fade-in duration-300">
+              {errorMsg}
+            </div>
+          )}
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label htmlFor="name" className="block text-xs font-inter tracking-widest text-brand-mutedLight uppercase">Name</label>
               <input 
                 type="text" 
                 id="name" 
+                name="name"
                 required
                 disabled={status === "submitting"}
                 className="w-full bg-brand-bg border-b border-brand-border px-4 py-3 text-brand-text focus:outline-none focus:border-brand-gold transition-colors font-inter text-sm disabled:opacity-50"
@@ -46,6 +80,7 @@ export default function ContactForm() {
               <input 
                 type="tel" 
                 id="phone" 
+                name="phone"
                 required
                 disabled={status === "submitting"}
                 className="w-full bg-brand-bg border-b border-brand-border px-4 py-3 text-brand-text focus:outline-none focus:border-brand-gold transition-colors font-inter text-sm disabled:opacity-50"
@@ -59,6 +94,7 @@ export default function ContactForm() {
             <input 
               type="email" 
               id="email" 
+              name="email"
               required
               disabled={status === "submitting"}
               className="w-full bg-brand-bg border-b border-brand-border px-4 py-3 text-brand-text focus:outline-none focus:border-brand-gold transition-colors font-inter text-sm disabled:opacity-50"
@@ -72,6 +108,7 @@ export default function ContactForm() {
               <input 
                 type="date" 
                 id="date" 
+                name="date"
                 disabled={status === "submitting"}
                 className="w-full bg-brand-bg border-b border-brand-border px-4 py-3 text-brand-mutedLight focus:outline-none focus:border-brand-gold transition-colors font-inter text-sm disabled:opacity-50"
               />
@@ -80,8 +117,9 @@ export default function ContactForm() {
               <label htmlFor="type" className="block text-xs font-inter tracking-widest text-brand-mutedLight uppercase">Event Type</label>
               <select 
                 id="type" 
+                name="type"
                 disabled={status === "submitting"}
-                className="w-full bg-brand-bg border-b border-brand-border px-4 py-3 text-brand-mutedLight focus:outline-none focus:border-brand-gold transition-colors font-inter text-sm disabled:opacity-50 appearance-none"
+                className="w-full bg-brand-bg border-b border-brand-border px-4 py-3 text-brand-mutedLight focus:outline-none focus:border-brand-gold transition-colors font-inter text-sm disabled:opacity-50 appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a0a0a0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22/%3E%3C/svg%3E')] bg-[length:0.65rem_auto] bg-[right_1rem_center] bg-no-repeat pr-8"
               >
                 <option value="wedding">Wedding</option>
                 <option value="pre-wedding">Pre-Wedding / Engagement</option>
@@ -96,6 +134,7 @@ export default function ContactForm() {
             <label htmlFor="message" className="block text-xs font-inter tracking-widest text-brand-mutedLight uppercase">Tell us about your day</label>
             <textarea 
               id="message" 
+              name="message"
               rows={4}
               required
               disabled={status === "submitting"}
@@ -118,3 +157,4 @@ export default function ContactForm() {
     </div>
   );
 }
+
