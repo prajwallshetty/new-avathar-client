@@ -53,7 +53,7 @@ export default function AdminLogin() {
       {/* Visual panel - visible on md screens */}
       <div className="hidden md:flex md:w-1/2 relative bg-muted overflow-hidden border-r border-border">
         <Image
-          src="/JKP00401.jpg.jpeg"
+          src="/wedding/JKP00401.jpg.jpeg"
           alt="Studio Background"
           fill
           className="object-cover opacity-80 filter saturate-50 hover:saturate-100 transition-all duration-1000"
