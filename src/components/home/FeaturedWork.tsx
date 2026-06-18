@@ -7,10 +7,34 @@ import Button from "@/components/ui/Button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const featuredImages = [
-  { id: 1, src: "/JKP00422.jpg.jpeg", alt: "Editorial Wedding", category: "Weddings", className: "md:col-span-2 md:row-span-2" },
-  { id: 2, src: "/RAVI1026.jpg.jpeg", alt: "Pre-wedding shoot", category: "Pre-Wedding", className: "md:col-span-1 md:row-span-1" },
-  { id: 3, src: "/JKP00510.jpg.jpeg", alt: "Bride portrait", category: "Portraits", className: "md:col-span-1 md:row-span-1" },
-  { id: 4, src: "/2N2A4012.jpg.jpeg", alt: "Event decor", category: "Events", className: "md:col-span-2 md:row-span-1" },
+  {
+    id: 1,
+    src: "/wedding/JKP00510.jpg.jpeg",
+    alt: "Wedding Day",
+    category: "Wedding",
+    className: "md:col-span-2 md:row-span-2",
+  },
+  {
+    id: 2,
+    src: "/prewedding/2N2A3948.jpg.jpeg",
+    alt: "Pre-wedding shoot",
+    category: "Pre-Wedding",
+    className: "md:col-span-1 md:row-span-1",
+  },
+  {
+    id: 3,
+    src: "/haldi/RAVI0201.jpg.jpeg",
+    alt: "Haldi Ceremony",
+    category: "Haldi",
+    className: "md:col-span-1 md:row-span-1",
+  },
+  {
+    id: 4,
+    src: "/reception/RAVI1026.jpg.jpeg",
+    alt: "Reception Evening",
+    category: "Reception",
+    className: "md:col-span-2 md:row-span-1",
+  },
 ];
 
 export default function FeaturedWork() {
@@ -39,7 +63,7 @@ export default function FeaturedWork() {
                   {img.category}
                 </span>
                 <Link
-                  href="/gallery"
+                  href={`/gallery?category=${img.category.toLowerCase().replace("-", "-")}`}
                   className="font-playfair text-brand-text text-xl md:text-2xl tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75"
                 >
                   View Details
@@ -51,7 +75,7 @@ export default function FeaturedWork() {
 
         <ScrollReveal direction="up" className="flex justify-center">
           <Button href="/gallery" variant="outline">
-            Explore Full Gallery
+            Explore Full Portfolio
           </Button>
         </ScrollReveal>
       </div>

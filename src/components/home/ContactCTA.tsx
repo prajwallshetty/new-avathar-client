@@ -40,7 +40,7 @@ export default function ContactCTA() {
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={0.3}>
-          <Button href="/contact" variant="primary" className="mx-auto">
+          <Button href="/contact" variant="default" className="mx-auto">
             Inquire Now
           </Button>
         </ScrollReveal>

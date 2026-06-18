@@ -5,14 +5,14 @@ import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 
 const stripImages = [
-  "/JKP00465.jpg.jpeg",
-  "/RAVI0201.jpg.jpeg",
-  "/2N2A4712.jpg.jpeg",
-  "/2N2A4884.jpg.jpeg",
-  "/2N2A5421.jpg.jpeg",
-  "/2N2A6060.jpg.jpeg",
-  "/JKP00602.jpg.jpeg",
-  "/RAVI1087.jpg.jpeg",
+  "/wedding/JKP00465.jpg.jpeg",
+  "/prewedding/2N2A4012.jpg.jpeg",
+  "/reception/RAVI1087.jpg.jpeg",
+  "/haldi/RAVI9939.jpg.jpeg",
+  "/Portraits/JKP00422.jpg.jpeg",
+  "/wedding/JKP00602.jpg.jpeg",
+  "/prewedding/2N2A5560.jpg.jpeg",
+  "/reception/RAVI0978.jpg.jpeg",
 ];
 
 export default function GalleryStrip() {

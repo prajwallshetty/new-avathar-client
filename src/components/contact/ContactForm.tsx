@@ -107,7 +107,7 @@ export default function ContactForm() {
           <div className="pt-4">
             <Button 
               type="submit" 
-              variant="primary" 
+              variant="default" 
               className={`w-full ${status === "submitting" ? "opacity-70 cursor-not-allowed" : ""}`}
             >
               {status === "submitting" ? "Sending..." : "Submit Inquiry"}

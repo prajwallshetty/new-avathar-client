@@ -14,7 +14,7 @@ export async function proxy(request: NextRequest) {
 
     try {
       const parsedSession = await decrypt(session);
-      if (parsedSession.role !== "admin") {
+      if (parsedSession.role !== "admin" && parsedSession.role !== "editor") {
         return NextResponse.redirect(new URL("/admin/login", request.url));
       }
     } catch (err) {
@@ -27,7 +27,7 @@ export async function proxy(request: NextRequest) {
   if (isAuthPage && session) {
     try {
       const parsedSession = await decrypt(session);
-      if (parsedSession.role === "admin") {
+      if (parsedSession.role === "admin" || parsedSession.role === "editor") {
         return NextResponse.redirect(new URL("/admin", request.url));
       }
     } catch (err) {

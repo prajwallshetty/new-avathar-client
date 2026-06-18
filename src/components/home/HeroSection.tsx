@@ -15,7 +15,7 @@ export default function HeroSection() {
         className="absolute inset-0 z-0"
       >
         <Image
-          src="/JKP00401.jpg.jpeg"
+          src="/hero.jpeg"
           alt="Cinematic Wedding Couple"
           fill
           priority
