@@ -10,7 +10,7 @@ export default function ContactCTA() {
       {/* Parallax Background */}
       <div className="absolute inset-0 z-0 opacity-40">
         <Image
-          src="/2N2A6661.jpg.jpeg"
+          src="/prewedding/2N2A6661.jpg.jpeg"
           alt="Contact background"
           fill
           className="object-cover object-center"

@@ -13,7 +13,7 @@ export default function AboutPreview() {
           <div className="w-full lg:w-1/2 relative">
             <ScrollReveal direction="right" delay={0.2} className="relative aspect-[4/5] w-full max-w-md mx-auto lg:ml-auto">
               <Image
-                src="/2N2A4803.jpg.jpeg"
+                src="/prewedding/2N2A4803.jpg.jpeg"
                 alt="Photographer at work"
                 fill
                 className="object-cover z-10"

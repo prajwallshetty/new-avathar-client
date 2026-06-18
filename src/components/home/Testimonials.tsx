@@ -12,21 +12,21 @@ const testimonials = [
     quote: "They didn't just take pictures; they directed a masterpiece. Looking at our photos feels like watching a beautiful movie of the best day of our lives.",
     author: "Elena & Marcus",
     location: "Lake Como Wedding",
-    img: "/2N2A5144.jpg.jpeg",
+    img: "/prewedding/2N2A5144.jpg.jpeg",
   },
   {
     id: 2,
     quote: "Working with New Avathar was the best decision we made. Their attention to detail, lighting, and raw emotion is unmatched in the industry.",
     author: "Sarah & John",
     location: "Tuscany Pre-Wedding",
-    img: "/2N2A4086.jpg.jpeg",
+    img: "/prewedding/2N2A4086.jpg.jpeg",
   },
   {
     id: 3,
     quote: "Our portraits look like they belong in Vogue. The luxury experience and the final artwork completely exceeded our highest expectations.",
     author: "Isabella Rossi",
     location: "Editorial Session",
-    img: "/2N2A4127.jpg.jpeg",
+    img: "/prewedding/2N2A4127.jpg.jpeg",
   }
 ];
 

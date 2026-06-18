@@ -9,7 +9,7 @@ export default function StorySection() {
       {/* Hero Image */}
       <div className="relative h-[60vh] md:h-[80vh] w-full mb-20 md:mb-32">
         <Image
-          src="/2N2A4013.jpg.jpeg"
+          src="/prewedding/2N2A4013.jpg.jpeg"
           alt="New Avathar Story"
           fill
           priority
@@ -37,7 +37,7 @@ export default function StorySection() {
             <ScrollReveal direction="right">
               <div className="relative aspect-[3/4] w-full border border-brand-gold/20 p-2">
                 <Image
-                  src="/RAVI0978.jpg.jpeg"
+                  src="/reception/RAVI0978.jpg.jpeg"
                   alt="The Lead Photographer"
                   fill
                   className="object-cover border border-brand-charcoal"
@@ -76,7 +76,7 @@ export default function StorySection() {
             <ScrollReveal direction="left">
               <div className="relative aspect-square md:aspect-[4/5] w-[80%] ml-auto border border-brand-gold/20 p-2">
                 <Image
-                  src="/2N2A4925.jpg.jpeg"
+                  src="/prewedding/2N2A4925.jpg.jpeg"
                   alt="Our Approach"
                   fill
                   className="object-cover border border-brand-charcoal"
